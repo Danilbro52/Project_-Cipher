@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Szyfr Vigenere</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Szyfr Vigenere</h1>
+        <form id="vigenere-form">
+            <label for="text">Tekst:</label>
+            <textarea id="text" name="text" rows="4" cols="50" required></textarea>
+
+            <label for="key">Klucz:</label>
+            <input type="text" id="key" name="key" required>
+
+            <label for="action">Akcja:</label>
+            <select id="action" name="action">
+                <option value="encrypt">Szyfrowanie</option>
+                <option value="decrypt">Deszyfrowanie</option>
+            </select>
+
+            <button type="submit">Wykonaj</button>
+        </form>
+        <div id="result"></div>
+        <button id="save-result" style="display: none;">Zapisz wynik do pliku</button>
+        <div id="history">
+            <h2>Historia operacji</h2>
+            <ul id="history-list"></ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
